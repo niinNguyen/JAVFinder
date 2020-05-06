@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="644.0" prefWidth="958.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <Pane prefHeight="71.0" prefWidth="891.0">
+         <children>
+            <TextField fx:id="searchField" layoutX="14.0" layoutY="22.0" prefHeight="28.0" prefWidth="333.0" />
+            <Button fx:id="searchBtn" layoutX="357.0" layoutY="20.0" mnemonicParsing="false" onAction="#lookUpActress" prefHeight="28.0" prefWidth="99.0" text="Search" />
+            <ProgressIndicator fx:id="progIndicator" layoutX="466.0" layoutY="15.0" prefHeight="42.0" prefWidth="44.0" progress="0.0" />
+         </children>
+      </Pane>
+      <ScrollPane layoutY="71.0" prefHeight="561.0" prefWidth="570.0">
+         <content>
+            <TableView fx:id="table" onMouseClicked="#tableClicked" prefHeight="680.0" prefWidth="571.0">
+               <columns>
+                  <TableColumn fx:id="orderedColumn" prefWidth="70.39999079704285" text="#" />
+                  <TableColumn fx:id="idColumn" text="ID" />
+                  <TableColumn fx:id="nameColumn" prefWidth="188.8000030517578" text="NAME" />
+                  <TableColumn fx:id="jpColumn" minWidth="0.0" prefWidth="217.60003662109375" text="JAPANESE NAME" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Pane layoutX="570.0" layoutY="70.0" prefHeight="562.0" prefWidth="387.0">
+         <children>
+            <ImageView fx:id="imageChar" fitHeight="150.0" fitWidth="159.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="nameLabel" layoutX="183.0" layoutY="28.0" prefHeight="21.0" prefWidth="130.0" text="Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="ageLabel" layoutX="183.0" layoutY="49.0" prefHeight="17.0" prefWidth="130.0" text="Japanse Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Separator layoutY="180.0" prefHeight="3.0" prefWidth="380.0" />
+            <Label fx:id="bwhLabel" layoutX="183.0" layoutY="70.0" prefHeight="17.0" prefWidth="130.0" text="Measurements">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="heightLabel" layoutX="183.0" layoutY="91.0" prefHeight="17.0" prefWidth="130.0" text="Height">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableCode" editable="true" layoutX="14.0" layoutY="190.0" prefHeight="363.0" prefWidth="370.0">
+              <columns>
+                <TableColumn fx:id="yearColumn" prefWidth="72.0" text="YEAR" />
+                <TableColumn fx:id="codeColumn" prefWidth="97.5999755859375" text="CODE" />
+                  <TableColumn fx:id="titleColumn" prefWidth="200.0" text="TITLE" />
+              </columns>
+            </TableView>
+            <Label fx:id="birthdayLabel" layoutX="183.0" layoutY="112.0" prefHeight="17.0" prefWidth="130.0" text="Birthday">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
